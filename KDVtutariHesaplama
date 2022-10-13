@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double miktar;
+        double kdvile;
+        double kdvTutari;
+        //kdvTutari= miktar /0.18;
+
+
+        System.out.println("Tutarı Giriniz: ");
+        miktar=input.nextInt();
+        System.out.println("KDVsiz Fiyat: "+miktar);
+
+        if (miktar<1000) {
+
+            kdvile = ((miktar * 18) / 100) + miktar;
+            //kdvile=kdvile+miktar;
+            kdvTutari = kdvile - miktar;
+
+
+
+            System.out.println("KDV ile son tutar: " + kdvile);
+            System.out.println("Sadece KDV: " + kdvTutari);
+        }
+
+        else if(miktar>1000){
+            kdvile = ((miktar*8)/100)+miktar;
+            kdvTutari = kdvile - miktar;
+            System.out.println("KDV ile son tutar: " + kdvile);
+            System.out.println("Sadece KDV: " + kdvTutari);
+        }
+        else {
+            System.out.println("Geçerli tutar giriniz");
+        }
+
+
+
+    }
+}
