@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double aKenar, bKenar, hipotenus;
+
+        System.out.println("Birinci Kenarı giriniz:");
+        aKenar=input.nextInt();
+        System.out.println("Birinci Kenar:"+aKenar);
+
+        System.out.println("İkinci Kenarı giriniz:");
+        bKenar=input.nextInt();
+        System.out.println("İkinci Kenar:"+bKenar);
+
+        hipotenus = Math.sqrt((aKenar*aKenar)+(bKenar*bKenar));
+        System.out.println("Hipotenüs:"+hipotenus);
+
+
+
+
+
+
+    }
+}
