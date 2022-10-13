@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class VeriAlma {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int matematik,fizik,kimya,turkce,tarih,muzik;
+
+        System.out.println("Kimya notunu giriniz: ");
+        kimya= input.nextInt();
+
+        System.out.println("Fizik notunu giriniz: ");
+        fizik= input.nextInt();
+
+        System.out.println("Matematik notunu giriniz: ");
+        matematik= input.nextInt();
+
+        System.out.println("Türkçe notunu giriniz: ");
+        turkce= input.nextInt();
+
+        System.out.println("Tarih notunu giriniz: ");
+        tarih= input.nextInt();
+
+        System.out.println("Müzik notunu giriniz: ");
+        muzik= input.nextInt();
+
+        System.out.println("Matematik:"+matematik);
+        System.out.println("Fizik:"+fizik);
+        System.out.println("Kimya:"+kimya);
+        System.out.println("Türkçe:"+turkce);
+        System.out.println("Tarih:"+tarih);
+        System.out.println("Müzik:"+muzik);
+
+        double ortalama;
+        ortalama = (matematik + fizik + kimya + turkce + tarih + muzik) / 6.0;
+        System.out.println("Ortalama"+ortalama);
+
+        boolean kosul = ortalama>=60;
+        String str=kosul? "Geçtiniz":"Kaldınız";
+        System.out.println(str);
+
+
+
+    }
+}
