@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+public class UcgeninAlanınıHesaplama {
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+
+        double ilkKenar, ikinciKenar, ucuncuKenar, cevre, ycevre, alan;
+        System.out.println("İlk Kenarı giriniz:");
+        ilkKenar=input.nextInt();
+
+        System.out.println("İkinci Kenarı giriniz:");
+        ikinciKenar=input.nextInt();
+
+        System.out.println("Üçüncü Kenarı giriniz:");
+        ucuncuKenar=input.nextInt();
+
+        cevre=ilkKenar+ikinciKenar+ucuncuKenar;
+        ycevre=cevre/2;
+        alan=Math.sqrt(ycevre*(ycevre-ilkKenar)*(ycevre-ikinciKenar)*(ycevre-ucuncuKenar));
+
+
+        System.out.println("Birinci Kenar:"+ilkKenar);
+        System.out.println("İkini Kenar:"+ikinciKenar);
+        System.out.println("Üçüncü Kenar:"+ucuncuKenar);
+        System.out.println("çevre:"+cevre);
+        System.out.println("Alan:"+alan);
+
+
+
+
+
+    }
+}
