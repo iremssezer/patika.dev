@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int  password, newpassword, control;
+        String nickname;
+        password=1234;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kullanıcı Adınızı Giriniz: ");
+        nickname = input.next();
+
+        System.out.print("Şifrenizi Giriniz: ");
+        control = input.nextInt();
+        if (control!=password){
+            boolean answer;
+            System.out.println("Şifreniz doğru değildir sıfırlmak ister misiniz?: ");
+            answer = input.nextBoolean();
+
+            if(answer){
+                    System.out.println("Şifre sıfırlama işleminizi onaylıyorum");
+                    System.out.print("Şifrenizi Giriniz: ");
+                    newpassword = input.nextInt();
+                    if (newpassword==password){
+                    System.out.println("Yeni belirlediğiniz şifrenin eski şifre ile aynı olmaması gerekmektedir.");
+
+                     }
+                    else if (newpassword==control) {
+
+                        System.out.println("Hatalı şifreyi tekrar girdiniz.Lütfen başka bir şifre giriniz.");
+                    }
+            }
+            else {
+                System.out.println("Şifre sıfırlama işlemi gerçekleşmedi.");
+            }
+
+        }
+
+    }
+}
