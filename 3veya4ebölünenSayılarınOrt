@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        
+        int sayi,d=0,toplam=0;
+        double ort;
+        
+        System.out.println("Sayı giriniz:");
+        sayi=input.nextInt();
+
+        for (int i=1;i<=sayi;i++){
+            if (i%3==0 && i%4==0){
+                d++;
+                System.out.println("Sayı:"+i);
+                toplam+=i;
+                System.out.println("döngü:"+d);
+            }
+        }
+        System.out.println("Ortalama:"+(toplam/d));
+
+    }
+}
