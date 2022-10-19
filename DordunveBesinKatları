@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int i,j,sayi,kat5,kat4;
+
+        System.out.println("Sayı giriniz:");
+        sayi = input.nextInt();
+
+        System.out.println("Sayı :" + sayi);
+
+
+            while (sayi % 4 == 0 && sayi % 5 == 0) {
+                System.out.println("Sayı 5'in ve 4'ün katı");
+
+
+                for (i = 1; i <= sayi; i *= 4) {
+                    System.out.println("4'ün katları" + i);
+
+                }
+                for (j = 1; j <= sayi; j *= 5) {
+                    System.out.println("5'ün katları" + j);
+
+                }
+                break;
+            }
+    }
+}
