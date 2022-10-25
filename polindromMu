@@ -1,31 +1,28 @@
-import java.util.Scanner;
-
-
 public class Main {
 
-    static boolean polindromMu() {
-        int tsayi;
-        Scanner scan = new Scanner(System.in);
+    static void polindromMu(int pol) {
 
-        System.out.print("Bir sayi giriniz: ");
-        int sayi = scan.nextInt();
-
-        while (sayi > 0) {
-
-            System.out.print(sayi % 10);
-
-            tsayi = sayi / 10;
-            while (tsayi == sayi) {
-                System.out.print("Palindrome!!! ");
-
-                
-            }
-            public static void main (String[]args){
-                System.out.println("İki basamaklı bir sayı giriniz: ");
-                polindromMu();
-            }
+        int ilk=pol;
 
 
-            }
+
+        int tsayi = 0;
+        for(;pol != 0; pol /= 10) {
+            int basamak = pol % 10;
+            tsayi = tsayi * 10 + basamak;
+            System.out.println("bas"+basamak);
+
         }
+            if(ilk==tsayi)
+                System.out.println(ilk+" Bir palindrom sayıdır ");
+            else
+                System.out.println("Palindrom sayı değildir ");
+      
+
     }
+
+
+    public static void main (String[]args){
+        polindromMu(555);
+    }
+}
