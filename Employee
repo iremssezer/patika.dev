@@ -1,0 +1,48 @@
+public class Employee {
+    String name;
+    double salary;
+    int workHours,hireYear;
+    double t;
+    double zam;
+    Employee(String name,double salary,int workHours,int hireYear ){
+        this.name=name;
+        this.salary=salary;
+        this.workHours=workHours;
+        this.hireYear=hireYear;
+        //Metot
+
+
+    }
+    void tax(double t){
+        if (salary<1000){
+            System.out.println("Vergi Uygulanmayacaktır.");
+        } else if (salary>1000) {
+            t=((salary*3)/100);
+            //System.out.println("Vergi:"+t);
+        }
+    }
+    void bonus(){
+        if (workHours>40){
+            int i;
+            for (i=0;i>40;i++){
+                salary+=30;
+                if (i==workHours){
+                    break;
+                }
+                //System.out.println("Salary:"+salary);
+            }
+
+        }
+    }
+    void raiseSalary(){
+        int z=2021-hireYear;
+        if (z<10){
+            zam=(salary*5)/100;
+            salary=salary+zam;
+            
+            
+        }
+        
+    }
+
+}
